@@ -4,7 +4,7 @@
 
 /* Variables */
 :root {
-    
+
     /* Primary */
     --Darkcyan: hsl(158, 36%, 37%);
     --Cream: hsl(30, 38%, 92%);
@@ -170,7 +170,7 @@ body {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 0;
-        content: url(./images/image-product-mobile.jpg);
+        content: url(./image-product-mobile.jpg);
         margin-bottom: 10px; /* Add spacing between hero image and content */
     }
 
