@@ -1,0 +1,229 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+    
+    /* Primary */
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    /* ## Typography */
+
+    /* Body Copy */
+    --Fontsize: 14px;
+
+    /* Font */
+    --PrimaryFontFamily: 'Montserrat', sans-serif;
+    --SecondaryFontFamily: 'Fraunces', serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Cream);
+}
+
+/* Container */
+.container {
+    height: 500px;
+    max-width: 650px;
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Align to the top of the container */
+    border-radius: 10px;
+    /* Best Comment: Add a comment about the container */
+}
+
+/* Hero Image */
+.hero-image {
+    height: 100%;
+    width: 100%;
+}
+
+.hero-image>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Content */
+.content {
+    padding: 10px 30px;
+}
+
+.content>h4 {
+    font-family: var(--PrimaryFontFamily);
+    font-weight: 100;
+    font-size: 17px;
+    letter-spacing: 5px;
+    color: var(--Darkgrayishblue);
+    margin: 8px 0;
+}
+
+.content>h1 {
+    font-family: var(--SecondaryFontFamily);
+    line-height: 35px;
+    color: var(--Verydarkblue);
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.content>p {
+    font-family: var(--PrimaryFontFamily);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    color: var(--Darkgrayishblue);
+    margin: 8px 0;
+}
+
+/* Pricing Section */
+.prices>span:first-child {
+    font-family: var(--SecondaryFontFamily);
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--Darkcyan);
+}
+
+#old-price {
+    font-family: var(--SecondaryFontFamily);
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: line-through;
+    color: var(--Darkgrayishblue);
+}
+
+.prices {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.price>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--PrimaryFontFamily);
+    font-size: 17px;
+    font-weight: 700;
+    width: 100%;
+    height: 50px;
+    color: var(--White);
+    background-color: var(--Darkcyan);
+    border: none;
+    border-radius: 8px;
+}
+
+.price>button>img {
+    margin-right: 10px;
+    color: var(--White);
+}
+
+/* Attribution */
+.attribution {
+    font-size: 20px;
+    font-family: var(--SecondaryFontFamily);
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attribution a {
+    font-family: var(--PrimaryFontFamily);
+    color: var(--Darkcyan);
+    text-decoration: none;
+}
+
+/* Media Queries */
+/* Mobile screens */
+@media (max-width: 620px) {
+    /* Adjust styles for mobile screens */
+    .container {
+        flex-direction: column; /* Change container content direction to column */
+        align-items: center; /* Center content vertically */
+        height: 650px; /* Increase height for better mobile view */
+        width: 70%; /* Adjust width for better mobile view */
+    }
+
+    .hero-image > img {
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        content: url(./images/image-product-mobile.jpg);
+        margin-bottom: 10px; /* Add spacing between hero image and content */
+    }
+
+    .content {
+        padding: 10px 15px; /* Adjust padding for better mobile view */
+    }
+
+    .content>h4 {
+        font-size: 15px; /* Adjust font size for better mobile view */
+        margin: 8px 0px;
+    }
+
+    .content>h1 {
+        font-size: 30px; /* Adjust font size for better mobile view */
+        margin: 12px 0px;
+    }
+
+    .content>p {
+        font-size: 15px; /* Adjust font size for better mobile view */
+        margin: 8px 0px;
+    }
+
+    .prices>span:first-child {
+        font-size: 30px; /* Adjust font size for better mobile view */
+    }
+
+    #old-price {
+        font-size: 13px; /* Adjust font size for better mobile view */
+    }
+
+    .prices {
+        margin: 15px 0px; /* Adjust margin for better mobile view */
+    }
+
+    .price>button {
+        font-size: 15px; /* Adjust font size for better mobile view */
+        margin: 10px 0px; /* Adjust margin for better mobile view */
+    }
+
+    .attribution {
+        display: none; /* Hide attribution for better mobile view */
+    }
+}
+
+/* Additional Media Queries for smaller screens */
+@media (max-width: 520px) {
+    .container {
+        width: 80%; /* Adjust width for better view on smaller screens */
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: 90%; /* Adjust width for better view on even smaller screens */
+    }
+}
